@@ -5,12 +5,15 @@ import { useRouter } from 'next/navigation';
 import PropTypes from 'prop-types';
 
 const NavLink = ({ link }) => {
+  
+  const router = useRouter();
+  
   if (!link || !link.url || !link.title) {
     // Handle error: Invalid link object
+    console.error('Invalid link object passed to NavLink.');
     return null;
   }
 
-  const router = useRouter();
   const isActive = router.pathname === link.url;
 
   const getLinkClassNames = () => {
