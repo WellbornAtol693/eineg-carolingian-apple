@@ -83,7 +83,7 @@ const Navbar = () => {
           className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center"
         >
           <span className="text-4xl text-white mr-1">Apophis</span>
-          <span className="text-4xl w-32 h-28 rounded bg-white text-black flex items-center justify-center">
+          <span className="text-4xl w-32 h-18 rounded bg-white text-black flex items-center justify-center">
             .InQtel
           </span>
         </Link>
