@@ -3,14 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import NavLink from "./navLink";
+//import NavLink from "./navLink";
 import { motion } from "framer-motion";
 import { useRouter } from 'next/navigation';
 
-const links = [
-  { url: "/", title: "Home" },
-  { url: "/about", title: "About" },
-  { url: "/contact", title: "Contact" },
+const navLink = [
+  { name: "Home", link: "/" },
+  { name: "About",  link: "/about" },
+  { name: "Contact", link: "/contact" },
 ];
 
 const Navbar = () => {
@@ -72,8 +72,14 @@ const Navbar = () => {
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
-        {links.map((link) => (
-          <NavLink link={link} key={link.title} />
+        {navLink.map(({ link, name }) => (
+           <Link 
+            key={name} 
+            href={link}
+            className='hover:bg-black rounded hover:text-white'
+          >
+            {name}
+          </Link>
         ))}
       </div>
       {/* LOGO */}
