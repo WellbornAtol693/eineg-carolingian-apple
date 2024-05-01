@@ -76,7 +76,7 @@ const Navbar = () => {
            <Link 
             key={name} 
             href={link}
-            className='hover:bg-black rounded hover:text-white'
+            className='hover:bg-black rounded p-3 hover:text-white'
           >
             {name}
           </Link>
